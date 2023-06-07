@@ -1,0 +1,32 @@
+from_jack_to_bob:
+  from: jack
+  to: bob
+  body: |
+    Hey Bob, I have some information for you.
+
+from_bob_to_jack:
+  from: bob
+  to: jack
+  body: |
+    Let's hear it, you can call me on 000-555-1234.
+
+from_lia_to_jack:
+  from: lia
+  to: jack
+  body: >-
+    -----BEGIN PGP MESSAGE-----
+    hQIMAzb+4mSC3MRvARAAg02iDR9+etcn2DddsdNEbhQvU7dWTwSYm9a4FHiIdTGW
+    2hNZNcFu1Rvs98usRVzObXbkYxT4VH/6Z6rEWbhkXUhwQFcL9TZQz8LtIp7JNlwf
+    nSTVZUV8dqksOagExVNHuGGM/9Fy4LrQPyZg+ly25ruCE+XQaLyFM2uG/pPPzoDn
+    /SBJpD8VE81+22aIajVYciJA4E4Ve+mSz7AypePGvWXiBzSpQD2PCQ+eGGNTfK4l
+    TJHyvcj2IfbZS7HP0XWALK5IuuCWQg1NO6P6OBJfmQa/+xlNrNjan0yfmiGKPeuv
+    7Bo0dIkHushVy7O4rx6RlhK+OBJn6SG2VbjF2exhrqAikoBtkruFe6yOSoRZgy4O
+    f6N3QIOzhbA9JCGm2pOdtLcsronlXcr0RYQrF73ORTgYkPFD7fLDnMUHeRdxufMX
+    cz11s0CQa5jTbG+BYmd+bxkh/s/QKpuaD571qB6NH8ESuL2NxYspkVU2ot7yniKv
+    usVIVO/sH6fbxYH5wwP3oIbNsyqMkhsZV1ss6qR/S55dfAalugOSF4fr/T2F9+4x
+    qeH6vG49rpEnDuZaDN46E2KkLd9mVB5A0Tw6TpPt1ARXaaySBiHcB9X85sy3on/D
+    kFUq55r0nyfESwFsj2luE7RLrNaWki5lzpdOitKwivTAo6mSmMYXNYQQhMYDjs/S
+    QwG5D05RXy7aLjc2NPKTW9CPn28+QU+7QwseJ66eAY8qZT0L1m0SAoA7U7c7kMU7
+    kw8ETqmO4pfnwx3l0D4DOGeyeWA=
+    =F5Ey
+    -----END PGP MESSAGE-----

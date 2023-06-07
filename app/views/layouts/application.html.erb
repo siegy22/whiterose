@@ -11,11 +11,25 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <%= yield %>
-    </main>
+  <body class="max-h-screen dark:bg-gray-800">
+    <div class="flex justify-center">
+      <% if flash.key?(:notice) %>
+        <div class="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 m-4 rounded relative ma-" role="alert">
+          <span class="block sm:inline"><%= flash.notice %></span>
+        </div>
+      <% end %>
+      <% if flash.key?(:alert) %>
+        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 m-4 rounded relative ma-" role="alert">
+          <span class="block sm:inline"><%= flash.alert %></span>
+        </div>
+      <% end %>
+    </div>
+
+    <%= link_to root_path do %>
+      <%= image_tag 'logo.webp', class: 'm-auto dark:hidden' %>
+      <%= image_tag 'logo_dark.webp', class: 'm-auto hidden dark:block' %>
+    <% end %>
+
+    <%= yield %>
   </body>
 </html>

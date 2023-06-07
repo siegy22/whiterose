@@ -1,0 +1,19 @@
+<div class="container m-auto">
+  <h1>Welcome <%= current_user.username %></h1>
+  <div class="grid grid-cols-3">
+    <div class="col-span-1">
+      <ul>
+        <% @latest_conversations.each do |conversation| %>
+          <li><%= link_to conversation.username, conversation_path(id: conversation.username) %></li>
+        <% end %>
+      </ul>
+
+      <%= link_to "New Conversation", new_conversation_path %><br />
+      <%= link_to "Log out", destroy_user_session_path %>
+    </div>
+    <div class="col-span-2">
+      <%= render @latest_messages, link_usernames: true %>
+    </div>
+  </div>
+</div>
+

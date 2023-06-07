@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  root "conversations#index"
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :conversations, only: [:new, :create, :show] do
+    get :pgp, on: :member
+    get :download_pgp, on: :member
+  end
+  resources :messages, only: [:create, :destroy]
+  resource :pgp, only: [:edit, :update]
+  devise_for :users
 end

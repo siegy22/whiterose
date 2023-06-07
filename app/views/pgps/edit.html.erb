@@ -1,0 +1,22 @@
+<div class="flex justify-center items-center">
+  <div class="mt-8">
+    <h1 class="font-bold text-4xl">
+      Update PGP public key
+    </h1>
+    <em>
+      To make sure your messages can be encrypted, add your public PGP key below
+    </em>
+
+    <%= form_with(url: pgp_path, class: "contents", method: :put) do |form| %>
+
+      <div class="my-5">
+        <%= form.label "PGP Public Key" %>
+        <%= form.text_area :pub_key, value: current_user.pgp_public_key, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full", rows: 20, style: "width: 705px;" %>
+      </div>
+
+      <div class="inline">
+        <%= form.submit "Save!", class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+      </div>
+    <% end %>
+  </div>
+</div>
