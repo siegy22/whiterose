@@ -4,13 +4,8 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params.merge(from: current_user))
     @message.encrypt_if_necessary!
 
-    respond_to do |format|
-      if @message.save
-        redirect_to(conversation_path(@message.to))
-      else
-        redirect_to(conversation_path(@message.to))
-      end
-    end
+    @message.save
+    redirect_to(conversation_path(@message.to))
   end
 
   # DELETE /messages/1 or /messages/1.json
