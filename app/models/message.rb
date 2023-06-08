@@ -14,6 +14,10 @@ class Message < ApplicationRecord
     self.body = format_pgp_message(enc_message)
   end
 
+  def unread?
+    !read
+  end
+
   private
   def format_pgp_message(msg)
     "-----BEGIN PGP MESSAGE-----\n#{Base64.encode64(msg.to_s)}-----END PGP MESSAGE-----"

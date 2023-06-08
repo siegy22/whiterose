@@ -10,8 +10,8 @@ class ConversationsController < ApplicationController
 
     @new_message = Message.new(to: @recipient)
     @messages = current_user.direct_messages_with(@recipient).ordered.limit(50).to_a
-    # raise current_user.recevied_messages_from(@recipient).where(read_once: true).count.inspect
     current_user.recevied_messages_from(@recipient).where(read_once: true).destroy_all
+    current_user.recevied_messages_from(@recipient).where(read: [false, nil]).update(read: true)
   end
 
   def new
