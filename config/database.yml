@@ -82,5 +82,4 @@ test:
 production:
   <<: *default
   database: whiterose_production
-  username: whiterose
-  password: <%= ENV["WHITEROSE_DATABASE_PASSWORD"] %>
+  username: rails

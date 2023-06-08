@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
     @message.encrypt_if_necessary!
 
     @message.save
-    redirect_to(conversation_path(@message.to))
+    redirect_to(conversation_path(@message.to.username))
   end
 
   # DELETE /messages/1 or /messages/1.json
